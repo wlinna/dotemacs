@@ -1,24 +1,14 @@
 ;; TODO: Separate different tasks to different files
 
+
+(add-to-list 'load-path user-emacs-directory)
+
+(require 'setup-package)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
-(require 'package)
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-(package-initialize)
-;; Check packages
-
-
 ;; Sane defaults
-
-;;; Needed packages
-;; (defun install-packages ()
-;;   (package-install
-;;    (cons 'magit melpa
-
-;;     )))
 
 ;;; Ido
 (require 'ido)
