@@ -13,7 +13,7 @@
 (defvar my-packages
   '(ac-js2 ace-jump-mode auto-complete dash epc expand-region flycheck gitconfig-mode gitignore-mode
            ido-ubiquitous jedi js2-mode key-chord key-combo lua-mode magit markdown-mode markdown-mode+
-           multiple-cursors paredit paredit-menu rainbow-mode skewer-mode smex undo-tree wrap-region
+           multiple-cursors org paredit paredit-menu rainbow-mode skewer-mode smex undo-tree wrap-region
            yasnippet zenburn-theme zencoding-mode))
 
 (defun my-packages-installed-p ()

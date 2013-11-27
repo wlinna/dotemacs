@@ -1,7 +1,18 @@
 ;; TODO: Separate different tasks to different files
 
 
+;; (setenv "PATH" (concat "/home/william/software/tern/bin:" (getenv "PATH")))
 (add-to-list 'load-path user-emacs-directory)
+
+;; Read following link for tern installation instructions
+;; http://ternjs.net/doc/manual.html#emacs
+(add-to-list 'load-path "~/software/tern/emacs")
+(autoload 'tern-mode "tern.el" nil t)
+
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
 
 (require 'setup-package)
 
@@ -118,6 +129,7 @@
             (local-set-key (kbd "C-c SPC") 'ace-jump-mode)
             (set-fill-column 79)
             (auto-fill-mode 1)
+
             ))
 
 (add-hook 'html-mode-hook
@@ -135,6 +147,7 @@
           (lambda ()
             (set-fill-column 100)
             (semantic-mode 1)
+            (tern-mode t)
             ))
 
 (add-hook 'python-mode-hook
@@ -152,6 +165,13 @@
       `(("." . ,(expand-file-name
                  (concat user-emacs-directory "backups")))))
 
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+;; Disable interlocking because it creates .#-symlink files
+(setq create-lockfiles nil)
+
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
+
 (put 'dired-find-alternate-file 'disabled nil)
