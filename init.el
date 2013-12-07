@@ -56,11 +56,16 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 ;; Basic keybindings
 
 (require 'key-chord)
 (key-chord-mode 1)
 (key-chord-define-global "jj" 'ace-jump-mode)
+
+(global-set-key (kbd "C-S-z") 'undo-tree-visualize)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "C-x g") 'magit-status)
