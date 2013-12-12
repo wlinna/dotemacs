@@ -59,6 +59,12 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+(require 'paren)
+(show-paren-mode +1)
+
+(require 'rainbow-delimiters)
+(rainbow-delimiters-mode +1)
+
 ;; Basic keybindings
 
 (require 'key-chord)
