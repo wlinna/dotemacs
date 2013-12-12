@@ -63,7 +63,11 @@
 (show-paren-mode +1)
 
 (require 'rainbow-delimiters)
-(rainbow-delimiters-mode +1)
+
+(define-globalized-minor-mode global-rainbow-delimiters-mode rainbow-delimiters-mode
+  rainbow-delimiters-mode)
+
+(global-rainbow-delimiters-mode 1)
 
 ;; Basic keybindings
 
