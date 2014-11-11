@@ -172,6 +172,8 @@
             (jedi:ac-setup)
             (subword-mode +1)
             (electric-indent-mode -1)
+            (setq tab-width 4)
+            (setq python-indent 4)
             ;; (es-auto-auto-indent-mode 0)
             ))
 
