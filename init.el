@@ -1,13 +1,12 @@
 ;; TODO: Separate different tasks to different files
 
-
 ;; (setenv "PATH" (concat "/home/william/software/tern/bin:" (getenv "PATH")))
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 ;; Read following link for tern installation instructions
 ;; http://ternjs.net/doc/manual.html#emacs
-(add-to-list 'load-path "~/software/tern/emacs")
-(autoload 'tern-mode "tern.el" nil t)
+;; (add-to-list 'load-path "~/software/tern/emacs")
+;; (autoload 'tern-mode "tern.el" nil t)
 
 (eval-after-load 'tern
    '(progn
