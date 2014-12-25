@@ -15,6 +15,8 @@
 
 (require 'setup-package)
 
+(exec-path-from-shell-copy-env "PATH")
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
