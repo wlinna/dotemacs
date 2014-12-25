@@ -5,3 +5,6 @@ backups
 elpa
 semanticdb
 *~
+smex-items
+ido.last
+.python-environments

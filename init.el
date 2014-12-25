@@ -137,6 +137,17 @@
             (lisp-config)
             ))
 
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (cider-mode 1)
+            (paredit-mode 1)))
+
+(add-hook 'cider-mode-hook
+          (lambda ()
+            (auto-complete-mode 0)
+            (company-mode 1)
+            (cider-turn-on-eldoc-mode)))
+
 (add-hook 'org-mode-hook
           (lambda ()
             (local-set-key (kbd "RET") 'org-return)
