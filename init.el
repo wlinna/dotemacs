@@ -34,11 +34,14 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;;; Disable unwanted UI-stuff
+;;;  UI-stuff
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (setq inhibit-startup-message t)
 
+(load-theme 'sanityinc-tomorrow-eighties)
+
+(require 'setup-powerline)
 
 (require 'expand-region)
 
@@ -47,8 +50,6 @@
 
 (require 'ido-ubiquitous)
 (ido-ubiquitous 1)
-
-(load-theme 'zenburn)
 
 (column-number-mode 1)
 (pending-delete-mode t)
