@@ -1,3 +1,6 @@
+;; Thanks for Howard Abrams for powerline configuration
+;; Code is licensed under CC-BY 3.0
+
 (require 'powerline)
 
 (defun powerline-simpler-vc-mode (s)
