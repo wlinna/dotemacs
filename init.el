@@ -95,6 +95,7 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-z i") 'helm-imenu)
 
 (defun newline-and-go ()
   (interactive)
@@ -149,7 +150,9 @@
           (lambda ()
             (auto-complete-mode 0)
             (company-mode 1)
-            (cider-turn-on-eldoc-mode)))
+            (eldoc-mode 1)))
+
+(add-hook 'cider-repl-mode-hook #'company-mode)
 
 (add-hook 'org-mode-hook
           (lambda ()

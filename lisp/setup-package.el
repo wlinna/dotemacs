@@ -17,6 +17,7 @@
            epc exec-path-from-shell expand-region
            flycheck
            gitconfig-mode gitignore-mode
+           helm
            ido-ubiquitous
            jedi js2-mode
            key-chord key-combo
