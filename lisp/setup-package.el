@@ -18,7 +18,7 @@
            flycheck
            gitconfig-mode gitignore-mode
            helm
-           ido-ubiquitous
+	   ido-completing-read+
            jedi js2-mode
            key-chord key-combo
            lua-mode

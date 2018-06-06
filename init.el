@@ -1,6 +1,13 @@
 ;; TODO: Separate different tasks to different files
 
 ;; (setenv "PATH" (concat "/home/william/software/tern/bin:" (getenv "PATH")))
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+;; (package-initialize)
+
 (add-to-list 'load-path (concat user-emacs-directory "lisp"))
 
 ;; Read following link for tern installation instructions
@@ -25,6 +32,10 @@
 ;;; Ido
 (require 'ido)
 (ido-mode 1)
+(ido-everywhere 1)
+
+(require 'ido-completing-read+)
+(ido-ubiquitous-mode 1)
 
 
 (require 'uniquify)
@@ -48,8 +59,7 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
-(require 'ido-ubiquitous)
-(ido-ubiquitous 1)
+(ido-ubiquitous-mode 1)
 
 (column-number-mode 1)
 (pending-delete-mode t)
